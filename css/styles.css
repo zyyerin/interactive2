@@ -1,28 +1,19 @@
 html, body { 
+	margin: 5%;
 	height: 100%; 
 	width: 100%; 
-	margin: 0; 
+	background-color: silver;
 }
 
 *{
 	font-family: Helvetica;
-	font-size: 200px;
-	color: ghostwhite;
+	font-size: 30px;
 	font-weight: bolder;
-}
-#maindiv{
-	padding: 0 0 15% 5%;
+	color: white;
 }
 a:hover{
-	background-color: blue;
-	opacity: .8;
-	transition: all 0.5s ease;
+	background-color: silver;
 }
 a{
 	background-color: white;
-	transition: all 0.5s ease;
-	transition-delay: .5s;
-}
-h2{
-	margin: -50px 0 0 0; 
 }
