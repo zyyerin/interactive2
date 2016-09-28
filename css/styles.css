@@ -2,7 +2,7 @@ html, body {
 	margin: 5%;
 	height: 100%; 
 	width: 100%; 
-	background-color: darkgray;
+	background-color: #e3d8aa;
 }
 
 *{
@@ -13,7 +13,7 @@ html, body {
 	letter-spacing: .5em;
 }
 a:hover{
-	background-color: silver;
+	background-color: #e3d8aa;
 }
 a{
 	background-color: white;
