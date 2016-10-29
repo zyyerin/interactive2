@@ -22,6 +22,10 @@ body{
   margin: 10% 20% 10% 15%;
   background-color: #f0f0f0;
 }
+html{
+  border-bottom: 200px solid transparent;
+
+}
 .return{
   clear:left;
 }
