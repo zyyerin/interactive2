@@ -7,6 +7,26 @@ p{
 body{
   margin: 10%;
 }
+.nightintro{
+  color: white;
+}
+
+.night{
+  background-color: black;
+}
+.bgRed{
+  background-color: red;
+}
+.borderRed{
+  border-color: red;
+}
+
+.borderWhite{
+  border-color: white;
+}
+.borderBlack{
+  border-color: black;
+}
 
 .letter{
   margin: 0px -40px -55px 0;
@@ -14,17 +34,10 @@ body{
   position: relative;
   transform: scale(0.3);
 }
-.spacechar{
-  margin: 0px -40px -55px 0;
-  float: left;
-  position: relative;
-  transform: scale(0.3);
-}
-.number{
-  margin: 0px -40px -55px 0;
-  float: left;
-  position: relative;
-  transform: scale(0.3);
+
+
+.space{
+  background-color: none;
 }
 .box{
   width: 40px;
@@ -32,30 +45,21 @@ body{
   border-style: solid;
   border-width: 16px;
   margin-top: -16px;
+
 }
-/*numbers and punctuations*/
-.box2{
-  border-color: blue;
-  width: 40px;
-  height: 40px;
-  border-style: solid;
-  border-width: 16px;
-  margin-top: -16px;
-}
-.bgRed{
-  background-color: red;
-}
-/*diagnols*/
+
 .diagleft::before {
   content:" ";
   width: 80px;
   height: 80px;
-  border-top: 36px solid red;
+  border-top: 24px solid red;
   transform:
   translateY(0px)
   translateX(-49px)
   rotate(45deg); 
   position: absolute;
+
+
 }
 
 .diagright::after {
@@ -69,6 +73,7 @@ body{
   rotate(-45deg); 
   position: absolute;
 }
+
 .diagboth::before {
   content:" ";
   width: 80px;
@@ -80,6 +85,7 @@ body{
   rotate(45deg); 
   position: absolute;
 }
+
 .diagboth::after {
   content:" ";
   width: 80px;
@@ -92,9 +98,8 @@ body{
   position: absolute;
 }
 
-/*position*/
 .north_{
-  padding-top: 16px;
+  padding-bottom: 16px;
   border-top: none;
 }
 .east_{
@@ -179,4 +184,8 @@ body{
   padding-right: 16px;
   padding-top: 16px;
   border: none;
+}
+
+.die{
+  border-color: red;
 }

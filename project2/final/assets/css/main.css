@@ -1,20 +1,32 @@
-p{
-  margin: 0 0 1% 20px;
+*{
   font-family: Helvetica;
   font-size: 10px;
   text-transform: uppercase;
+  letter-spacing: .1em;
+}
+p{
+  margin-left: 25px;
+  position: fixed;
+  z-index: 100;
+}
+a{
+  margin-left: 25px;
+  top: 90%;
+  text-decoration: none;
+  color: silver;
+  border-bottom: 1px solid silver;
+  position: fixed;
+  z-index: 50;
 }
 body{
-  margin: 10%;
+  margin: 10% 20% 10% 15%;
+  background-color: #f0f0f0;
+}
+.return{
+  clear:left;
 }
 
 .letter{
-  margin: 0px -40px -55px 0;
-  float: left;
-  position: relative;
-  transform: scale(0.3);
-}
-.spacechar{
   margin: 0px -40px -55px 0;
   float: left;
   position: relative;

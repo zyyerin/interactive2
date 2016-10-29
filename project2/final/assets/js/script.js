@@ -18,24 +18,32 @@ $(document).ready(function(){
 		if(e.keyCode == 8){
 			$('div.letter').last().remove();
 		}
+	}) 	
+
+	$('html').keyup(function(e){
+		if(e.keyCode == 13){
+			var $newdiv = $("<div class='letter return'></div>");
+			$('body').append($newdiv);
+		}
 	}) 
 
  	//typing
- 	$('body').keypress(function(e) {
+ 	$('html').keypress(function(e) {
  		var chime = 1 + Math.floor(Math.random() * 9);
  		var sound =	document.getElementById("chime"+chime);
+ 		var bgm =	document.getElementById("bgm");
 
  		switch (e.keyCode) {
  			case 32:
-			var $newdiv = $("<div class='letter space'><div class='box2 none'></div><div class='box2 none'></div></div>");
-			$('.space').css('background-color',"none");
+ 			var $newdiv = $("<div class='letter space'><div class='box2 none'></div><div class='box2 none'></div></div>");
+ 			$('.space').css('background-color',"none");
 			break;//spacebar
 
 //a-g
-			case 97:
-			sound.play();
-			cases[0] ++;
-			var $newdiv = $("<div class='letter'><div class='box upper '></div><div class='box lower south_'></div></div>");
+case 97:
+sound.play();
+cases[0] ++;
+var $newdiv = $("<div class='letter'><div class='box upper '></div><div class='box lower south_'></div></div>");
 			break;//a
 
 			case 98:
@@ -74,10 +82,10 @@ $(document).ready(function(){
 			var $newdiv = $("<div class='letter'><div class='box upper northw'></div><div class='box lower north_'></div></div>" );
 			break;//g
 //h-n
-			case 104:
-			sound.play();			
-			cases[7] ++;
-			var $newdiv = $("<div class='letter'><div class='box upper north_'></div><div class='box lower south_'></div></div>" );
+case 104:
+sound.play();			
+cases[7] ++;
+var $newdiv = $("<div class='letter'><div class='box upper north_'></div><div class='box lower south_'></div></div>" );
 			break;//h
 
 			case 105:
@@ -105,9 +113,9 @@ $(document).ready(function(){
 			break;//l
 
 			case 109:
-			sound.play();
-			sound.loop = true;
-			sound.volume = .1;
+			bgm.play();
+			bgm.loop = true;
+			bgm.volume = .3;
 			cases[12] ++;
 			var $newdiv = $("<div class='letter'><div class='box m upper south diagleft'></div><div class='box m lower south diagleft'></div></div>" );
 			break;//m
@@ -118,10 +126,10 @@ $(document).ready(function(){
 			var $newdiv = $("<div class='letter'><div class='box upper east diagleft'></div><div class='box lower west diagleft'></div></div>" );
 			break;//n
 //o-t
-			case 111:
-			sound.play();
-			cases[14] ++;
-			var $newdiv = $("<div class='letter'><div class='box upper none bgRed'></div><div class='box lower none bgRed'></div></div>" );
+case 111:
+sound.play();
+cases[14] ++;
+var $newdiv = $("<div class='letter'><div class='box upper none bgRed'></div><div class='box lower none bgRed'></div></div>" );
 			break;//o
 
 			case 112:
@@ -153,10 +161,10 @@ $(document).ready(function(){
 			var $newdiv = $("<div class='letter'><div class='box upper northw'></div><div class='box lower west'></div></div>" );
 			break;//t
 //u-z
-			case 117:
-			sound.play();
-			cases[20] ++;
-			var $newdiv = $("<div class='letter'><div class='box upper eastwest'></div><div class='box lower north_'></div></div>" );
+case 117:
+sound.play();
+cases[20] ++;
+var $newdiv = $("<div class='letter'><div class='box upper eastwest'></div><div class='box lower north_'></div></div>" );
 			break;//u
 
 			case 118:
@@ -272,6 +280,10 @@ var $newdiv = $("<div class='letter'><div class='box2 west'></div><div class='bo
 			var $newdiv = $("<div class='letter'><div class='box2 none'></div><div class='box2 none diagboth'></div></div>" );
 			break;//.
 
+			case 45:
+			sound.play();
+			var $newdiv = $("<div class='letter'><div class='box2 none'></div><div class='box2 north'></div></div>" );
+			break;//.
 		}
 //create a new character
 $('body').append($newdiv);
@@ -299,149 +311,192 @@ var mostIndex = returnIndex();
 
 
 
-switch (mostIndex){
-//a-g
- 	case 0:
- 	$('.box').css("border-color","red");
- 	$(".charvoice").text("so proud to be myself XD");
+ switch (mostIndex){
+	//a-g
+	case 0:
+	$('.box').css({
+		borderColor : 'red',
+		transition : '1s ease-in-out'
+	});
+	$("p").text("so proud to be myself XD");
  	break;//a
 
  	case 1:
  	$('.upper').removeClass("diagboth diagleft").addClass("diagright");
- 	$(".charvoice").text("this awkward feeling :-<");
+ 	$("p").text("this awkward feeling :-<");
  	break;//b
 
  	case 2:
  	$('.box').removeClass("diagboth diagright diagleft");
- 	$(".charvoice").text("keep everything clean, okay? :-0");
+ 	$("p").text("keep everything clean, okay? :-0");
  	break;//c
 
  	case 3:
  	$('.upper').removeClass("diagboth diagright").addClass("diagleft");
  	$('.lower').removeClass("diagboth diagleft").addClass("diagright");
- 	$(".charvoice").text("go this way >>");
+ 	$("p").text("go this way >>");
  	break;//d
 
  	case 4:
- 	$('.box').css("opacity","0.3");
- 	$('.e').css("opacity","1");
- 	$(".charvoice").text("Why am I so prefect ?_?");
+ 	$('.box').css({
+ 		opacity : '.3',
+ 		transition : '1s ease-in-out'
+ 	});
+ 	$('.e').css({
+ 		opacity : '1',
+ 		transition : '1s ease-in-out'
+ 	});
+ 	$("p").text("Why am I so prefect ?_?");
  	break;//e
 
  	case 5:
- 	$('.box').css("opacity","1");
- 	$('.e').css("opacity","0");
- 	$(".charvoice").text("E is just stupid -.-");
+ 	$('.box').css({
+ 		opacity : '1',
+ 		transition : '1s ease-in-out'
+ 	});
+ 	$('.e').css({
+ 		opacity : '0',
+ 		transition : '1s ease-in-out'
+ 	});
+ 	$("p").text("E is just stupid -.-");
  	break;//f
 
  	case 6:
  	$('.e.lower').removeClass("east_").addClass("west");
  	$('.f.lower').removeClass("west").addClass("east_");
- 	$(".charvoice").text("E & F look the same to me");
+ 	$("p").text("E & F look the same to me");
  	break;//g
 
 //h-n
- 	case 7:
- 	$('.box').css("border-color","gray");
- 	$(".charvoice").text("want to lie down :-{");
+case 7:
+$('.box').css({
+	borderColor : 'gray',
+	transition : '1s ease-in-out'
+});;
+$("p").text("want to lie down :-{");
 	break;//h
 
- 	case 8:
- 	$('.west').toggleClass("west east", 500);
- 	$(".charvoice").text("I like moving around :-p");
+	case 8:
+	$('.east').toggleClass("west east",500);
+	$('.west').toggleClass("east west",500);
+	$("p").text("I like moving around :-p");
  	break;//i
 
  	case 9:
- 	$('.box').css("border-color","silver");
-	$(".charvoice").text("where is my hat :`<");
+ 	$('.box').css({
+ 		borderColor : 'lightgray',
+ 		transition : '1s ease-in-out'
+ 	});
+ 	$("p").text("where is my hat :`<");
  	break;//j
 
  	case 10:
  	$('.upper').removeClass("diagboth diagleft").addClass("diagright");
  	$('.lower').removeClass("diagboth diagright").addClass("diagleft");
-	$(".charvoice").text("<< go this way");
+ 	$("p").text("<< go this way");
  	break;//k
 
  	case 11:
  	$('.box').removeClass("diagboth diagleft diagright borderRed");
- 	$(".charvoice").text("relax =l=");
+ 	$("p").text("relax =l=");
  	break;//l
 
  	case 12:
  	$("audio").prop('muted', false);
- 	$(".charvoice").text("I like music and sound <3");
+ 	bgm.volume = 1;
+ 	sound.volume = 0;
+ 	$("p").text("I like music and sound <3");
  	break;//m
 
  	case 13:
- 	$('.box').removeClass("diagboth diagright").addClass("diagleft").css("border-color","ghostwhite");
- 	$(".charvoice").text("headache Q-Q");
+ 	$('.box').removeClass("diagboth diagright").toggleClass("diagleft").css({
+ 		borderColor : 'ghostwhite',
+ 		transition : '1s ease-in-out'
+ 	});;
+ 	$("p").text("headache Q-Q");
  	break;//n
 
 //o-t
- 	case 14:
- 	$("body").css( "background-color", "red");
- 	$(".charvoice").text("my favorite color is");
+case 14:
+$("body").css({
+	backgroundColor : 'red',
+	transition : '1s ease-in-out'
+});
+$("p").text("my favorite color is");
  	break;//o
 
  	case 15:
- 	$(".upper").css( "background-color", "ghostwhite");
- 	$(".charvoice").text("Can you see...(((=O=;)))");
+ 	$(".upper").css({
+ 		backgroundColor : 'ghostwhite',
+ 		transition : '1s ease-in-out'
+ 	});
+ 	$("p").text("Can you see...(((=O=;)))");
  	break;//p
 
  	case 16:
  	$('.m').removeClass('diagleft');
  	$("audio").prop('muted', true);
- 	$(".charvoice").text("shut up");
+ 	$("p").text("shut up");
  	break;//q
 
  	case 17:
  	$('body').removeClass();
  	$('.box').removeClass();
- 	$(".charvoice").text("start fresh (*`-`*)");
+ 	$("p").text("start fresh (*`-`*)");
  	break;//r
 
  	case 18:
- 	$("body").css("background-color", "black");
- 	$(".charvoice").text("feeling sleepy zzzzZZZZ").css("color", "white");
+ 	$("body").css({
+ 		backgroundColor : 'black',
+ 		transition : '1s ease-in-out'
+ 	});
+ 	$("p").text("feeling sleepy zzzzZZZZ").css("color", "white");
  	break;//s
 
  	case 19:
- 	$(".box").css("opacity", ".5")
- 	$(".charvoice").text("...").css( "opacity", ".5" );
+ 	$(".box").css({
+ 		opacity : '.1',
+ 		transition : '1s ease-in-out'
+ 	});
+ 	$("p").text("...").css( "opacity", ".5" );
 	break;//t
 
- 	case 20:
- 	$('body').css("background-color","gray");
- 	$('.box').css("border-color","silver");
- 	$(".charvoice").text("what's going on 0-0").css("color","silver");
+	case 20:
+	$('body').css("background-color","gray");
+	$('.box').css("border-color","silver");
+	$("p").text("what's going on 0-0").css("color","silver");
 	break;//u
 
- 	case 21:
- 	$('.lower').addClass('diagboth');
- 	$(".charvoice").text("feeling unstable :-/"); 	
+	case 21:
+	$('.lower').addClass('diagboth');
+	$("p").text("feeling unstable :-/"); 	
  	break;//v
 
  	case 22:
  	$("body").css("background-color", "white");
- 	$(".charvoice").text("time to wake :-D").css( "color", "black" );
+ 	$("p").text("time to wake :-D").css( "color", "black" );
  	break;//w
 
  	case 23:
- 	$('.upper').removeClass().addClass("diagboth box none");
+ 	$('.lower').css({
+ 		borderColor : 'red',
+ 		transition : '1s ease-in-out'
+ 	});
+ 	$('.upper').addClass("diagboth");
  	$('.lower').removeClass().addClass('south box');
- 	$('.box').css("border-color","red");
- 	$(".charvoice").text("got food poisoning... otz");
+ 	$("p").text("got food poisoning... otz");
  	break;//x
 
  	case 24:
- 	$('.diagright').toggleClass("diagright");
- 	$(".charvoice").text("too tired to do anything =3=");
+ 	$("p").text("too tired to do anything =3=");
  	break;//y
 
  	case 25:
- 	$(".box").css("border-color", "blue");
- 	$(".diagright").css("border-color", "blue");
- 	$(".charvoice").text("once in a blue moon").css("color", "blue");
+ 	$(".box").css({
+ 		borderColor : 'blue',
+ 		transition : '1s ease-in-out'
+ 	});
+ 	$("p").text("once in a blue moon").css("color", "blue");
  	break;//z
 
  	case 26:
