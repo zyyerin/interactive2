@@ -14,7 +14,6 @@ a{
   top: 90%;
   text-decoration: none;
   color: silver;
-  border-bottom: 1px solid silver;
   position: fixed;
   z-index: 50;
 }
@@ -23,13 +22,18 @@ body{
   background-color: #f0f0f0;
 }
 html{
-  border-bottom: 200px solid transparent;
-
+  border-bottom: 500px solid transparent;
 }
 .return{
   clear:left;
 }
 
+.aboutbuttom{
+  color: silver;
+  top: 85%;
+  position: fixed;
+  z-index: 50;
+}
 .letter{
   margin: 0px -40px -55px 0;
   float: left;

@@ -15,14 +15,31 @@ div{
   z-index: 100;
   width: 20%;
 }
+span{
+  color: silver;
+  font-weight: lighter;
+}
 a{
-  margin-left: 25px;
-  top: 90%;
   text-decoration: none;
   color: silver;
-  border-bottom: 1px solid silver;
+  border-bottom: none;
+}
+#credittrigger{
+  cursor: pointer;
+}
+.backbuttom{
+  color: silver;
+  top: 84%;
+  margin-left: 25px;
   position: fixed;
   z-index: 50;
+}
+ul{
+  font-weight: lighter;
+  color:silver;
+  margin-left: -40px;
+  line-height: 1.6em;
+  list-style-type:none;
 }
 body{
   margin: 10% 20% 10% 15%;
