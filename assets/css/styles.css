@@ -29,6 +29,7 @@ a{
 .final{
 	font-weight: bolder;
 	color: #232323;
+	clear: both;
 }
 .back{
 	background-color: #232323;
