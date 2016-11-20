@@ -1,0 +1,51 @@
+body{
+	background-color: #f0f0f0;
+}
+#gallery{
+background-color: white;
+width: 1000px;
+overflow: scroll;
+}
+.panel{
+	position: relative;
+	/*background-color: white;*/
+	/*box-shadow: 5px 5px 0px #d0d0d0;*/
+	display: inline-block;
+	margin: 10px;
+
+}
+.panel > div{
+	display: inline-block;
+	margin: 1px;
+	border: 2px solid black;
+}
+
+.one{
+	width: 48px;
+	padding-top: 48px;
+
+}
+.two{
+	width: 48px;
+	padding-top: 72px;
+}
+.three{
+	width: 36px;
+	padding-top: 72px;
+}
+.fourUpper{
+
+	width: 36px;
+
+	padding-top: 36px;
+}
+.fourLower{
+
+
+	width: 36px;
+	padding-top: 36px;
+}
+.seven{
+	width: 18px;
+	padding-top: 72px;
+}
