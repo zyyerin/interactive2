@@ -1,51 +1,50 @@
 body{
-	background-color: #f0f0f0;
-}
-#gallery{
-background-color: white;
-width: 1000px;
-overflow: scroll;
+	background-color: black;
 }
 .panel{
 	position: relative;
-	/*background-color: white;*/
-	/*box-shadow: 5px 5px 0px #d0d0d0;*/
 	display: inline-block;
-	margin: 10px;
-
 }
 .panel > div{
-	display: inline-block;
-	margin: 1px;
-	border: 2px solid black;
+	position: absolute;
+	    box-sizing: border-box;
+	border: 1px solid white;
 }
-
 .one{
+	top: 50px;
 	width: 48px;
-	padding-top: 48px;
-
+	height: 48px;
 }
 .two{
 	width: 48px;
-	padding-top: 72px;
+	height: 72px;
 }
+#two2{margin-left: 48.2px}
+
 .three{
 	width: 36px;
-	padding-top: 72px;
+	height: 72px;
 }
-.fourUpper{
+#three2{margin-left: 36.2px;}
+#three3{margin-left: 72.4px;}
 
+.four{
 	width: 36px;
-
-	padding-top: 36px;
+	height: 36px;
 }
-.fourLower{
+#four2{margin: 0 0 0 36.2px;}
+#four3{margin: 0.2px 0 0 0;}
+#four4{margin:-36px 0 0 36.2px;}
 
 
-	width: 36px;
-	padding-top: 36px;
-}
 .seven{
 	width: 18px;
-	padding-top: 72px;
+	height: 72px;
 }
+
+#seven2{margin-left: 18.2px;}
+#seven3{margin-left: 36.4px;}
+#seven4{margin-left: 54.6px;}
+#seven5{margin-left: 72.8px;}
+#seven6{margin-left: 91.0px;}
+#seven7{margin-left: 109.2px;}
