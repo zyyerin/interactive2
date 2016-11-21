@@ -1,0 +1,87 @@
+.white{
+	width: 440px;
+	height:440px;
+	border-radius: 50%;
+	margin: 15% auto 0 auto;
+	background-color: #eeeeee;
+	box-shadow: 0 0 50px #cccccc;
+	z-index: 1;
+}
+
+.yellow{
+	width: 160px;
+	height: 160px;
+	border-radius: 50%;
+	margin: 140px;
+	position: absolute;
+	background-color: #ffaa00;
+	z-index: 20;
+
+}
+.white:hover{
+	animation: cookwhite 20s, frying 3s infinite;
+	/*animation: frying 5s infinite;*/
+
+}
+.white:hover > .yellow{
+	animation: cookyellow 20s; 
+}
+@keyframes cookwhite {
+	0%{
+		background-color: #eeeeee;
+	}
+	50% {
+		background-color: white;
+	}
+	100%{
+		background-color: black;
+	}
+}
+
+@keyframes cookyellow {
+	0%{
+		background-color: #ffaa00;
+	}
+	50% {
+		background-color: yellow;
+	}
+	100%{
+		background-color: black;
+	}
+}
+
+@keyframes frying {
+	0% {
+		width: 450px;
+		height: 430px;
+		transform: rotate(42deg);
+
+	}
+
+	50% {
+		width: 430px;
+		height: 450px;
+		transform: rotate(26deg);
+	}
+
+
+	100% {
+		width: 450px;
+		height: 430px;
+		transform: rotate(85deg);
+	}
+
+	50% {
+		width: 430px;
+		height: 450px;
+		transform: rotate(26deg);
+	}
+
+	0% {
+		width: 450px;
+		height: 430px;
+		transform: rotate(42deg);
+
+	}
+
+}
