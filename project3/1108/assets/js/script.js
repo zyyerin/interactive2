@@ -1,38 +1,57 @@
-var scene, camera, renderer;
-var geometry, material, mesh;
+$(function(){
+var scene = new THREE.Scene();
+var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
-init();
-animate();
+var renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setColor(0xffffff);
+renderer.shadowMapEnabled = true;
+renderer.shadowMapSoft = true;
+renderer.shadowMapType = THREE.PCFSoftShadowMap;
 
-function init() {
+var axis = new THREE.AxisHelper(10);
+// scene.add(axis);
 
-    scene = new THREE.Scene();
+var geometry = new THREE.BoxGeometry(25, 25, 2, 50, 50, 50);
+var white = new THREE.MeshLambertMaterial({color:0xffffff});
+var cube = new THREE.Mesh(geometry, white);
 
-    camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 10000 );
-    camera.position.z = 1000;
+cube.position.x = 0;
+cube.position.y = 0;
+cube.position.z = 0;
 
-    geometry = new THREE.BoxGeometry( 200, 200, 200 );
-    material = new THREE.MeshBasicMaterial( { color: 0xffffff, wireframe: false } );
+cube.castShadow = true;
+scene.add(cube);
 
-    mesh = new THREE.Mesh( geometry, material );
-    scene.add( mesh );
 
-    renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-    renderer.setSize( window.innerWidth, window.innerHeight );
+var planeGeo = new THREE.PlaneGeometry(50, window.innerHeight, 500, 500);
+var wall = new THREE.Mesh(planeGeo, white);
+wall.receiveShadow = true;
+scene.add(wall);
 
-    renderer.setClearColor( 0xffffff, 0);
+var spotLight = new THREE.SpotLight(0xffffff);
+spotLight.castShadow = true;
+spotLight.position.set(15, 30, 50);
+scene.add(spotLight);
 
-    document.body.appendChild( renderer.domElement );
+camera.position.x = 10;
+camera.position.y = 10;
+camera.position.z = 50;
 
-}
+camera.lookAt(scene.position);
 
-function animate() {
+renderer.render(scene, camera);
+$("#webGL-container").append(renderer.domElement);
 
-    requestAnimationFrame( animate );
+// var render = function (){
+//     requestAnimationFrame(render);
 
-    mesh.rotation.x += 0.001;
-    mesh.rotation.y += 0.001;
+//     cube.rotation.x += 0.01;
+//     cube.rotation.y += 0.01;
 
-    renderer.render( scene, camera );
+//     renderer.render(scene, camera);
+// };
 
-}
+// render();
+
+});

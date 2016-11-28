@@ -1,19 +1,62 @@
 body{
-	background-color: black;
+	margin: 0;
+	overflow: hidden;
+	background-image: url("../../img/noise2.png");
+	background-repeat: repeat;
+	border: 2px solid blue;
 }
+/*.clearfix:after { 
+	content: " "; 
+	visibility: hidden; 
+	display: block; 
+	height: 0; 
+	clear: both;
+}*/
+.ruler{
+	position: fixed;
+	top: 2vh;
+	left: 2vw;
+	width: 5in;
+	height: 5in;
+	background-image: url("../../img/ruler.png");
+	background-repeat: no-repeat;
+	z-index: 100;
+}
+
+#cursor{
+	width: 16vw;
+	font-family: Arial;
+	font-size: 1vw;
+	/*margin: -15vw 0 0 -20vw;*/
+	position: absolute;
+}
+
+.container{
+	width: 100vw;
+	height: 100vh;
+	overflow: scroll;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
 .panel{
+	opacity: .95;
+	margin: 5in;
 	position: relative;
 	display: inline-block;
+	z-index: 10;
 }
 .panel > div{
-	position: absolute;
-	    box-sizing: border-box;
-	border: 1px solid white;
+	overflow: visible;
+	box-sizing: border-box;
+	background-color: white;
+	box-shadow: .1in .1in 0 rgba(0, 0, 0, .2),
+	0.5in -0.5in 0 rgba(100, 100, 100, .1);
 }
 .one{
-	top: 50px;
-	width: 48px;
-	height: 48px;
+	width: 48in;
+	height: 48in;
 }
 .two{
 	width: 48px;
