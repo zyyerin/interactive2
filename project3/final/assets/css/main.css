@@ -1,0 +1,153 @@
+body{
+	font-family: Arial;
+	margin: 0;
+	overflow: hidden;
+	background-image: url("../../img/bg2.jpg");
+	background-repeat: repeat;
+}
+
+.tip{
+	pointer-events: none;
+	width: 35vw;
+	font-size: 1.7vw;
+	line-height: 2.5vw;
+	opacity: .4;
+}
+.exTitle{
+	color:white;
+}
+
+.ruler{
+	pointer-events: none;
+	position: fixed;
+	top: 2vh;
+	left: 2vw;
+	width: 5in;
+	height: 5in;
+	background-image: url("../../img/ruler2.png");
+	background-repeat: no-repeat;
+	z-index: 100;
+}
+.container{
+	width: 100vw;
+	height: 100vh;
+	overflow: scroll;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+.about{
+	pointer-events: none;
+	width: 35vw;
+	font-size: 1.7vw;
+	padding: 1.3in 0 0 1.5in;
+	line-height: 2.5vw;
+	opacity: .5;
+}
+.text{
+	pointer-events: none;
+	font-size: 72pt;
+	padding: 5in;
+	color: gray;
+}
+.text1{
+	pointer-events: none;
+	font-size: 320pt;
+	line-height: 370pt;
+}
+.text2{
+	pointer-events: none;
+	font-size: 400pt;
+	line-height: 470pt;
+}
+.text3{
+	pointer-events: none;
+
+	font-size: 270pt;
+	line-height: 320pt;
+}
+.text4{
+	pointer-events: none;
+
+	font-size: 200pt;
+	line-height: 230pt;
+}
+.text5{
+	pointer-events: none;
+	font-size: 150pt;
+	line-height: 200pt;
+}
+.text7{
+	pointer-events: none;
+	font-size: 150pt;
+	line-height: 220pt;
+	padding: 2in;
+}
+.panel{
+	margin: 5in;
+	position: relative;
+	display: inline-block;
+	z-index: 10;
+}
+.panel > div{
+	box-sizing: border-box;
+	background-color: white;
+	box-shadow: .1in .1in 0 rgba(0, 0, 0, .2),
+	0.5in -0.5in 0 rgba(100, 100, 100, .1);
+}
+
+
+
+
+/*normal panel*/
+.one{
+	width: 48in;
+	height: 48in;
+}
+.two{
+	width: 48in;
+	height: 72in;
+}
+#two2{margin: -72in 0 0 48.2in}
+
+.three{
+	width: 36in;
+	height: 72in;
+}
+#three2{margin: -72in 0 0 36.2in;}
+#three3{margin: -72in 0 0 72.4in;}
+
+.four{
+	position: relative;
+	width: 36in;
+	height: 36in;
+}
+#four1{
+	z-index: 7;
+}
+#four2{
+	z-index: 8;
+	margin: -36in 0 0 36.2in;}
+	#four3{
+		margin: 0.2in 0 0 0;
+		z-index: 4;
+	}
+	#four4{
+		margin: -36in 0 0 36.2in;
+		z-index: 5;
+	}
+
+
+	.seven{
+		width: 18in;
+		height: 72in;
+	}
+
+	#seven2{margin: -72in 0 0 18.2in;}
+	#seven3{margin: -72in 0 0 36.4in;}
+	#seven4{margin: -72in 0 0 54.6in;}
+	#seven5{margin: -72in 0 0 72.8in;}
+	#seven6{margin: -72in 0 0 91.0in;}
+	#seven7{margin: -72in 0 0 109.2in;}
+
+

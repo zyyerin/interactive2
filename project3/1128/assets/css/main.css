@@ -33,11 +33,11 @@ body{
 	left: 0;
 }
 .about{
-	width: 50vw;
-	height: 50vh;
-	font-size: 2.4vw;
-	padding: 1in 0 0 1in;
+	width: 30vw;
+	font-size: 2.2vw;
+	padding: 2in 0 0 1in;
 	line-height: 3.2vw;
+	opacity: .5;
 }
 .text{
 	font-size: 72pt;
@@ -64,6 +64,7 @@ body{
 }
 
 .panelzero > div{
+	position: absolute;
 	box-sizing: border-box;
 	background-color: white;
 	box-shadow: .02in .02in 0 rgba(0, 0, 0, .2),
@@ -73,32 +74,65 @@ body{
 .zero{
 	width: 24vw;
 	height: 24vw;
-	top: 25vh;
+	top: 25%;
 	left: 65vw;
-	position: absolute;
 }
 .ztwo{
+	width: 24vw;
+	height: 36vw;
+}
+#zt1{top: 15%;left: 110vw;}
+#zt2{top: 15%;left: 134.1vw;}
+
+/*three*/
+.zthree{
 	width: 18vw;
 	height: 36vw;
-	top: 15vh;
-	left: 100vw;
-	position: absolute;
 }
-.ztwo2{
+#zth1{top: 15vh;left: 184vw;}
+#zth2{top: 15vh;left: 202.1vw;}
+#zth3{top: 15vh;left: 220.2vw;}
+
+
+/*four*/
+.zfour{
+	position: relative;
 	width: 18vw;
-	height: 36vw;
-	top: 15vh;
-	left: 118.1vw;
-	position: absolute;
+	height: 18vw;
+	z-index: 7;
 }
+#zf1{top: 15vh;left: 260vw;}
+#zf2{top: 15vh;left: 278.1vw;}
+#zf3{top: 15vh;left: 260vw;}
+#zf4{top: 33.1vh;left: 278.1vw;}
+
+
+.zs{
+	width: 9vw;
+	height: 36vw;
+}
+#zs1{top: 15vh;left: 310vw;}
+#zs2{top: 15vh;left: 319.2vw;}
+#zs3{top: 15vh;left: 328.4vw;}
+#zs4{top: 15vh;left: 337.6vw;}
+#zs5{top: 15vh;left: 346.8vw;}
+#zs6{top: 15vh;left: 356vw;}
+#zs7{top: 15vh;left: 365.2vw;}
+
+
+
 
 .space{
 	position: absolute;
-	left: 200vw;
+	left: 400vw;
 	width: 5in;
 	height: 100%;
 	/*background-color: red;*/
 }
+
+
+
+/*normal panel*/
 .one{
 	width: 48in;
 	height: 48in;
