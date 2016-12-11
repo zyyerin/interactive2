@@ -1,47 +1,46 @@
 var bgimg;
-
-bgimg = Math.floor(Math.random() * 30);
+bgimg = Math.floor(Math.random() * 15);
 $(document).ready(function() {
+	$('.ruler').hide();
+
 
 	switch (bgimg) {
-		case 1:
-		$('body').css("background-image", "url(img/bg2.jpg");  
-		break;
-
-		case 2:
-		$('body').css("background-image", "url(img/bg3.jpg");  
-		break;
-
-		case 3:
-		$('body').css("background-image", "none");  
-		break;
-
-		case 4:
+		case 0:
 		$('body').css({"background-image": "none", "background-color":"ghostwhite"});  
 		break;
 
-		case 5:
+		case 1:
 		$('body').css({"background-image": "none", "background-color":"black"});  
 		break;
 
-		case 6:
-		$('body').css("background-image", "url(img/bg4.jpg");  
+		case 2:
+		$('body').css({"background-image": "none", "background-color":"white"});  
 		break;		
 
-		case 7:
-		$('body').css("background-image", "url(img/bg5.jpg");  
-		break;		
-
-		case 8:
-		$('body').css("background-image", "url(img/bg6.png");  
+		case 3:
+		$('body').css("background-image", "url(img/grid.png");  
+		$('.ruler').show();
 		break;
 
-		case 9:
-		$('body').css("background-image", "url(img/bg7.png");  
+		case 4:
+		$('body').css({"background-image": "none", "background-color":"AntiqueWhite"});  
+		break;
+
+		case 5:
+		$('body').css({"background-image": "none", "background-color":"FloralWhite"});  
+		break;
+
+		case 6:
+		$('body').css({"background-image": "none", "background-color":"NavajoWhite"});  
+		break;
+
+		case 7:
+		$('body').css({"background-image": "none", "background-color":"WhiteSmoke"});  
 		break;
 
 		default:
 		$('body').css("background-image", "url(img/bg1.png");  
+		$('.ruler').hide();
 		break;
 	}
 

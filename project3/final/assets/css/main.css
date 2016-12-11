@@ -20,13 +20,13 @@ body{
 .ruler{
 	pointer-events: none;
 	position: fixed;
-	top: 2vh;
-	left: 2vw;
-	width: 5in;
-	height: 5in;
-	background-image: url("../../img/ruler2.png");
+	top: 0.72in;
+	left: .75in;
+	width: 1.5in;
+	height: 1.5in;
+	background-image: url("../../img/in.png");
 	background-repeat: no-repeat;
-	z-index: 100;
+	opacity: .5;
 }
 .container{
 	width: 100vw;
